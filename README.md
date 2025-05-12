@@ -1,72 +1,71 @@
-# 🎮 Amorous Türkçe Yama Projesi
+Amorous Türkçe Dil Yaması
 
-Bu repo, Steam üzerinden edinilebilen **Amorous** adlı görsel roman oyununun Türkçeye çevrilmesini amaçlayan bir açık kaynak projedir. Proje kapsamında, hem otomatik hem de manuel olarak metinlerin çevrilmesi ve oyunun dosyalarının güncellenmesi süreçleri belgelenmiştir.
+Bu projede, Amorous oyununu Türkçe oynamak isteyen kullanıcılar için bir çeviri çözümü sunuyorum. Aşağıda hem doğrudan kuruluma yönelik yöntem hem de çeviriyi manuel yapmak isteyenler için detaylı bir rehber yer almaktadır.
+🔁 Hızlı Kurulum (Tavsiye Edilen Yöntem)
 
-## 📌 Hızlı Kurulum (Dosya ile)
+Eğer dosyalarla manuel uğraşmak istemiyorsanız ve oyunu Steam üzerinden varsayılan kurulum konumuna yüklediyseniz, aşağıdaki adımları izleyerek oyunu Türkçeleştirebilirsiniz:
 
-Eğer teknik işlemlerle uğraşmak istemiyor ve Steam’den oyunu **varsayılan klasör**e kurduysanız, aşağıdaki adımları uygulayarak kolayca Türkçe yama uygulayabilirsiniz:
+    Aşağıda verdiğim Quests klasörünü indirin ve çıkartın.
 
-1. Aşağıdaki dizine gidin:
+    Dosya yöneticinize aşağıdaki yolu yapıştırarak oyunun dil dosyalarının olduğu konuma gidin:
 
-C:\Program Files (x86)\Steam\steamapps\common\Amorous\Content-Release\Data
+    C:\Program Files (x86)\Steam\steamapps\common\Amorous\Content-Release\Data
 
+    Buradaki mevcut Quests klasörünü yedekleyin (isteğe bağlı ama önerilir).
 
-2. Buradaki **`Quests`** klasörünü bir yedek aldıktan sonra, bu klasörü WinRAR veya 7Zip gibi bir programla açın.
-3. Bu repoda sağlanacak Türkçeye çevrilmiş `Quest` dosyalarıyla değiştirin.
-4. Oyunu tekrar başlattığınızda arayüz ve diyaloglar Türkçe olacaktır.
+    Ardından indirdiğiniz Quests klasörünü bu konuma yapıştırın ve var olan dosyaların üzerine yazılmasına izin verin.
 
----
+Bu işlemlerden sonra oyun Türkçe olarak çalışacaktır.
+🛠️ Manuel Çeviri Süreci
 
-## 🛠 Manuel Çeviri Süreci
+Kendi çevirinizi yapmak isterseniz aşağıdaki adımları takip edebilirsiniz:
+1. Dosya Konumuna Erişim
 
-Daha derinlemesine düzenleme veya kendi çevirinizi yapmak isterseniz aşağıdaki adımları takip edebilirsiniz:
-
-### 1. Dil Dosyalarının Konumu
+Steam'den indirilen oyunun çeviri dosyaları şurada yer alır:
 
 C:\Program Files (x86)\Steam\steamapps\common\Amorous\Content-Release\Data\Quests
 
+2. Dosyaları Açma
 
-Bu klasördeki `.json` dosyalar oyunun senaryosunu içermektedir. Ancak bu dosyalar doğrudan metin düzenleyiciyle açıldığında **şifrelenmiş** karakterler görünecektir.
+Bu klasörde .json uzantılı ancak sıkıştırılmış ve şifrelenmiş yapıda dosyalar göreceksiniz. Bu dosyaları doğrudan bir kod editörü ile açarsanız içeriği anlamlı olmayacaktır.
 
-### 2. 7Zip ile JSON Dosyalarını Açmak
+Çözüm:
+7-Zip yazılımını kullanın. İndirme bağlantısı: https://www.7-zip.org
 
-1. [7Zip](https://www.7-zip.org/) programını indirin ve kurun.
-2. İlgili `.json` dosyasına sağ tıklayıp:
-   - `7Zip` > `Open Archive` seçeneğine tıklayın.
-3. Açılan pencerede dosya içeriği düzgün biçimde görüntülenir.
-4. **F4 tuşu** veya `File > Edit` seçeneği ile metni düzenleyebilirsiniz.
-5. Kaydettikten sonra, 7Zip güncelleme isteyecek, “Evet” diyerek değişiklikleri kaydedin.
+Adımlar:
 
-### 3. Gelişmiş Çeviri Aracı Kullanımı
+    İlgili .json dosyasına sağ tıklayın → 7-Zip → Open Archive seçeneğini tıklayın.
 
-Projeye özel aşağıdaki Python scriptleri ile çeviri sürecini otomatikleştirebilirsiniz:
+    Açılan pencerede içeriği görebileceksiniz.
 
-- `A_TxT.py`: JSON içindeki `"Text"` alanlarını `.txt` dosyasına çıkarır.
-- `A_Part.py`: Uzun `.txt` dosyalarını 200 kelimelik parçalara ayırır.
-- (v1.2) Yeni: Çevrilmiş `.txt` içeriğini yeniden `.json` dosyasına otomatik olarak entegre eden script (yakında paylaşılacak).
+    File > Edit (veya F4 tuşu) ile dosyanın içeriğini düzenleyebilirsiniz. Kaydettikten sonra 7-Zip size güncellemek isteyip istemediğinizi soracaktır. Evet diyerek değişiklikleri onaylayabilirsiniz.
 
-### ⚠ Notlar
+🧩 Çeviri Araçları
 
-- JSON dosyalarında sembolik karakterler (`░` gibi) varsa, bu semboller ek boşluk eklemek içindir. Kullanım tercihinize göre kaldırabilirsiniz.
-- Script dosyalarını çalıştırmadan önce açıklamaları dikkatlice okuyunuz.
+Çeviri sürecini kolaylaştırmak amacıyla birkaç Python aracı geliştirdim:
+1. A_Txt.py – JSON'dan Metin Çıkarımı
 
----
+Bu script, .json dosyasındaki "Text" anahtarına karşılık gelen metinleri çıkararak aynı isimde bir .txt dosyasına aktarır. ░ gibi özel karakterleri de otomatik olarak temizler. Kodun içinde tüm adımlar ayrıntılı olarak açıklanmıştır.
+2. A_Part.py – Metni Parçalara Bölme
 
-## 🤝 Katkıda Bulunun
+Çıkarılan .txt dosyasını çeviri motorlarına (örneğin GPT, DeepL vb.) daha kolay aktarabilmek için bu script, metni 200 blokluk parçalara ayırır. Bu sayede hem kontrol edilebilir hem de sistemli çeviri sağlanır.
+📌 Notlar
 
-Kendi çevirilerinizi, düzeltmelerinizi ya da geliştirdiğiniz scriptleri paylaşmak için lütfen bir **Pull Request (PR)** gönderin veya bizimle iletişime geçin.
+    Kodları çalıştırmadan önce açıklamaları dikkatlice okuyun.
 
----
+    Geliştirilen kodlar Python ile yazılmıştır ve çalıştırılmadan önce gerekli dosya yollarının kişisel sisteminize göre düzenlenmesi gerekir.
 
-## 📬 Destek
+    Herhangi bir sorunuz olursa bana e-posta ile ulaşabilirsiniz.
 
-Herhangi bir sorunuz ya da geri bildiriminiz varsa aşağıdaki iletişim kanallarından ulaşabilirsiniz:
+🚧 Geliştirme Notları
 
-- E-posta: `youremail@example.com`
-- GitHub Issue sayfası
+Bu döküman şu an için v1.1 sürümünü kapsamaktadır. v1.2 ile birlikte çevirilen .txt dosyasının tekrar .json yapısına otomatik olarak aktarılmasını sağlayacak yeni bir script planlanmaktadır.
+🎮 Son Adım – Türkçeleştirilmiş JSON'u Oyuna Aktarma
 
----
+    Elde edilen çevirili .json dosyasını tekrar 7-Zip ile açın.
 
-## 📄 Lisans
+    Edit (F4) seçeneği ile orijinal dosya içeriğini yeni çeviriyle değiştirin.
 
-Bu proje sadece kişisel kullanım ve modlama amaçlıdır. **Amorous** oyununun tüm hakları [Team Amorous](https://www.amorousgame.com/) ekibine aittir.
+    Kaydedip arşiv güncellemeyi onaylayın.
+
+    Oyunu başlattığınızda artık Türkçe içerikle çalışıyor olacaktır.
