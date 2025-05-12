@@ -13,10 +13,6 @@ Eğer dosyalarla manuel olarak uğraşmak istemiyorsanız ve oyunu Steam üzerin
 
 C:\Program Files (x86)\Steam\steamapps\common\Amorous\Content-Release\Data
 
-yaml
-Copy
-Edit
-
 3. Buradaki mevcut `Quests` klasörünü **yedeklemeniz önerilir**.
 4. İndirdiğiniz `Quests` klasörünü bu konuma yapıştırın ve dosyaların üzerine yazılmasına **izin verin**.
 
