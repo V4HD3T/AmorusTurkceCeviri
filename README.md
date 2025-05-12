@@ -30,10 +30,6 @@ Oyun Steam üzerinden indirildiyse çeviri dosyaları şu klasördedir:
 
 C:\Program Files (x86)\Steam\steamapps\common\Amorous\Content-Release\Data\Quests
 
-yaml
-Copy
-Edit
-
 ### 2. Dosyaları Açma
 
 Bu klasörde `.json` uzantılı fakat **sıkıştırılmış ve şifrelenmiş** yapıda dosyalar bulunmaktadır. Bu dosyaları bir kod editörüyle doğrudan açmak sağlıklı sonuç vermez.
