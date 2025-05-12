@@ -45,6 +45,13 @@ Bu klasörde `.json` uzantılı fakat **sıkıştırılmış ve şifrelenmiş** 
 
 ---
 
+## ⚠️ Önemli Not – Türkçe Karakter Desteği
+
+Amorous oyunu, bazı Türkçe özel karakterleri (`ç`, `ğ`, `ı`, `ö`, `ş`, `ü`) doğrudan desteklememektedir.  
+Bu nedenle **manuel çeviri sürecinde** bu karakterlerin kullanımından kaçınılması önerilir.
+
+---
+
 ## 🧩 Çeviri Araçları
 
 Aşağıdaki Python scriptleri çeviri sürecini hızlandırmak için geliştirilmiştir:
