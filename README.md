@@ -4,7 +4,7 @@ Bu proje, **Amorous** oyununu Türkçe oynamak isteyen kullanıcılar için haz�
 
 ---
 
-## 🔁 Hızlı Kurulum (Tavsiye Edilen Yöntem)
+## 🔁 Hızlı Kurulum
 
 Eğer dosyalarla manuel olarak uğraşmak istemiyorsanız ve oyunu Steam üzerinden **varsayılan kurulum konumuna** yüklediyseniz, aşağıdaki adımları takip ederek oyunu hızlıca Türkçeleştirebilirsiniz:
 
