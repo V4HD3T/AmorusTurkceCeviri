@@ -85,8 +85,7 @@ Aşağıdaki Python scriptleri çeviri sürecini hızlandırmak için geliştiri
 
 ## 🚧 Geliştirme Notları
 
-- Bu belge **v1.1** sürümünü kapsamaktadır.
-- Yakında çıkacak **v1.2** ile `.txt` çevirisini tekrar `.json` yapısına otomatik aktaran yeni bir script yayınlanacaktır.
+- Yakında eklenecek py kodu ile `.txt` çevirisini tekrar `.json` yapısına otomatik aktaran yeni bir script yayınlanacaktır.
 
 ---
 
