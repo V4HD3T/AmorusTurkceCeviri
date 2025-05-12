@@ -96,4 +96,4 @@ Herhangi bir sorunuz veya öneriniz olursa benimle e-posta üzerinden iletişime
 
 ---
 
-**Amorous** oyununun Türkçeleştirilmesine katkı sağlamak isterseniz, Pull Request gönderebilir veya Issues kısmından bildirimde bulunabilirsiniz.
+**Amorous** oyununun Türkçeleştirilmesine katkı sağlamak isterseniz, Pull Request gönderebilir, Issues kısmından bildirimde bulunabilirsiniz ve ya e-posta üzerinden iletişime geçebilirsiniz.
