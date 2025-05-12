@@ -1,0 +1,189 @@
+{
+  "Name": "DJ",
+  "Stages": [
+    {
+      "Stage": 10,
+      "StartID": 1,
+      "Events": [
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Excuse me?░ Hello?░ Hey Mr. DJ!",
+          "Title": "%playername%",
+          "Color": {
+            "B": 255,
+            "G": 255,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 1,
+          "NextID": 11,
+          "DebugID": 1
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "ClubDJNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 2,
+          "NextID": 3,
+          "DebugID": 2
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Oh, sorry!░ Didn't see you down there.░ What's up?",
+          "Title": "Club Amorous DJ",
+          "Color": {
+            "B": 255,
+            "G": 122,
+            "R": 40,
+            "A": 255
+          },
+          "ID": 3,
+          "NextID": 4,
+          "DebugID": 2
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "I'd like to request a song, if that's alright?",
+          "Title": "%playername%",
+          "Color": {
+            "B": 255,
+            "G": 255,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 4,
+          "NextID": 5,
+          "DebugID": 3
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "ClubDJNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 5,
+          "NextID": 6,
+          "DebugID": 4
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Hold on, I have to turn some knobs...",
+          "Title": "Club Amorous DJ",
+          "Color": {
+            "B": 255,
+            "G": 122,
+            "R": 40,
+            "A": 255
+          },
+          "ID": 6,
+          "NextID": 8,
+          "DebugID": 4
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Oh, sure.░ Thanks!",
+          "Title": "%playername%",
+          "Color": {
+            "B": 255,
+            "G": 255,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 7,
+          "NextID": 12,
+          "DebugID": 5
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DelayEventData, Amorous.Engine",
+          "Delay": 3000,
+          "ID": 8,
+          "NextID": 9,
+          "DebugID": 6
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "ClubDJNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 9,
+          "NextID": 10,
+          "DebugID": 7
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Alright... Yea, sure, no problem!░ But listen, I'm trying to put on a show here.░ Here's my number, just text me your request and I'll get to it.",
+          "Title": "Club Amorous DJ",
+          "Color": {
+            "B": 255,
+            "G": 122,
+            "R": 40,
+            "A": 255
+          },
+          "ID": 10,
+          "NextID": 7,
+          "DebugID": 7
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DelayEventData, Amorous.Engine",
+          "Delay": 3000,
+          "ID": 11,
+          "NextID": 2,
+          "DebugID": 8
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetStageEventData, Amorous.Engine",
+          "Quest": "DJ",
+          "Stage": 20,
+          "ID": 12,
+          "NextID": 0,
+          "DebugID": 9
+        }
+      ]
+    },
+    {
+      "Stage": 20,
+      "StartID": 1,
+      "Events": [
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "ClubDJNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 1,
+          "NextID": 2,
+          "DebugID": 1
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Sorry, kinda busy over here!░ You have my number, so use your phone!",
+          "Title": "Club Amorous DJ",
+          "Color": {
+            "B": 255,
+            "G": 122,
+            "R": 40,
+            "A": 255
+          },
+          "ID": 2,
+          "NextID": 0,
+          "DebugID": 1
+        }
+      ]
+    }
+  ]
+}

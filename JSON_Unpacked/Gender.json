@@ -1,0 +1,611 @@
+{
+  "Name": "Gender",
+  "Stages": [
+    {
+      "Stage": 10,
+      "StartID": 35,
+      "Events": [
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "I identify as male.",
+              "NextID": 2
+            },
+            {
+              "Text": "I identify as female.",
+              "NextID": 5
+            },
+            {
+              "Text": "I identify as something else.",
+              "NextID": 33
+            }
+          ],
+          "ID": 1,
+          "NextID": 0,
+          "DebugID": 1
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "I've been this way my whole life.",
+              "NextID": 4
+            },
+            {
+              "Text": "I might have mixed physiology, but... (Continued.)",
+              "NextID": 31
+            },
+            {
+              "Text": "(Back.)",
+              "NextID": 1
+            }
+          ],
+          "ID": 2,
+          "NextID": 0,
+          "DebugID": 2
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "Male pronouns are important, but I'm at peace with my body.",
+              "NextID": 38
+            },
+            {
+              "Text": "I'd prefer not to draw attention to my 'feminine' physiology.",
+              "NextID": 17
+            },
+            {
+              "Text": "(Back.)",
+              "NextID": 49
+            }
+          ],
+          "ID": 3,
+          "NextID": 0,
+          "DebugID": 3
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.ConditionalBranchEventData, Amorous.Engine",
+          "Flag": "Player.Breasts.None",
+          "TrueID": 38,
+          "FalseID": 3,
+          "ID": 4,
+          "NextID": 0,
+          "DebugID": 4
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "I've been this way my whole life.",
+              "NextID": 12
+            },
+            {
+              "Text": "I might have mixed physiology, but... (Continued.)",
+              "NextID": 32
+            },
+            {
+              "Text": "(Back.)",
+              "NextID": 1
+            }
+          ],
+          "ID": 5,
+          "NextID": 0,
+          "DebugID": 5
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "The pronouns are important, but I'm at peace with my body.",
+              "NextID": 30
+            },
+            {
+              "Text": "I'd prefer no discussion of my 'masculine' physiology.",
+              "NextID": 14
+            },
+            {
+              "Text": "(Back.)",
+              "NextID": 48
+            }
+          ],
+          "ID": 6,
+          "NextID": 0,
+          "DebugID": 6
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "I identify as Xi, They or another neutral, androgynous term.",
+              "NextID": 15
+            },
+            {
+              "Text": "I identify as an hermaphrodite or externally intersexed.",
+              "NextID": 27
+            },
+            {
+              "Text": "I identify using feminine-leaning androgynous terms.",
+              "NextID": 34
+            },
+            {
+              "Text": "I identify using masculine-leaning androgynous terms.",
+              "NextID": 19
+            },
+            {
+              "Text": "(Back.)",
+              "NextID": 44
+            }
+          ],
+          "ID": 7,
+          "NextID": 0,
+          "DebugID": 7
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "The term \"girlfriend\" is fine with me.",
+              "NextID": 18
+            },
+            {
+              "Text": "The term \"boyfriend\" suits me more.",
+              "NextID": 9
+            },
+            {
+              "Text": "I'd prefer the term \"partner\".",
+              "NextID": 15
+            }
+          ],
+          "ID": 8,
+          "NextID": 0,
+          "DebugID": 8
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "I'd prefer nothing \"top-side\" to be drawn attention to.",
+              "NextID": 17
+            },
+            {
+              "Text": "I'd prefer nothing \"below the belt\" to be drawn attention to.",
+              "NextID": 16
+            },
+            {
+              "Text": "I'd prefer to limit discussion of my body as much as possible.",
+              "NextID": 20
+            },
+            {
+              "Text": "Pronouns are important, but I'm comfortable with my body.",
+              "NextID": 21
+            },
+            {
+              "Text": "(Back.)",
+              "NextID": 45
+            }
+          ],
+          "ID": 9,
+          "NextID": 0,
+          "DebugID": 9
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "TeamAmorousNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 10,
+          "NextID": 11,
+          "DebugID": 10
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Be aware that sexual content may include your character acting in a penetrative role, due to the limitations in the customization of sexual animations.░ Your choices will effect pronouns used and a more neutral description of sexual activity,░ treating the penetrative object as separate where possible.",
+          "Title": "Team Amorous",
+          "Color": {
+            "B": 255,
+            "G": 160,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 11,
+          "NextID": 28,
+          "DebugID": 10
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "TeamAmorousNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 12,
+          "NextID": 13,
+          "DebugID": 11
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "As Amorous was built with a male character in mind,░ there are some limitations to playing a biosex female, despite the models in the character creator.",
+          "Title": "Team Amorous",
+          "Color": {
+            "B": 255,
+            "G": 160,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 13,
+          "NextID": 14,
+          "DebugID": 11
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Female",
+          "Value": true,
+          "ID": 14,
+          "NextID": 16,
+          "DebugID": 12
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Neutral",
+          "Value": true,
+          "ID": 15,
+          "NextID": 9,
+          "DebugID": 13
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.No.Cock",
+          "Value": true,
+          "ID": 16,
+          "NextID": 40,
+          "DebugID": 14
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.No.Breast",
+          "Value": true,
+          "ID": 17,
+          "NextID": 28,
+          "DebugID": 15
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Female",
+          "Value": true,
+          "ID": 18,
+          "NextID": 9,
+          "DebugID": 16
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "The term \"boyfriend\" is fine with me.",
+              "NextID": 9
+            },
+            {
+              "Text": "I'd prefer the term \"partner\".",
+              "NextID": 15
+            }
+          ],
+          "ID": 19,
+          "NextID": 0,
+          "DebugID": 17
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.No.Breast",
+          "Value": true,
+          "ID": 20,
+          "NextID": 16,
+          "DebugID": 18
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.ConditionalBranchEventData, Amorous.Engine",
+          "Flag": "Player.Cock.None",
+          "TrueID": 43,
+          "FalseID": 22,
+          "ID": 21,
+          "NextID": 0,
+          "DebugID": 19
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.ConditionalBranchEventData, Amorous.Engine",
+          "Flag": "Player.Cock.Slit",
+          "TrueID": 43,
+          "FalseID": 28,
+          "ID": 22,
+          "NextID": 0,
+          "DebugID": 20
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "TeamAmorousNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 23,
+          "NextID": 24,
+          "DebugID": 21
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "As Amorous was built with a male character in mind,░ there are some limitations despite the models in the character creator.░ Genitalia is treated as internal until the sexual scenes for the animated section.",
+          "Title": "Team Amorous",
+          "Color": {
+            "B": 255,
+            "G": 160,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 24,
+          "NextID": 28,
+          "DebugID": 21
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "TeamAmorousNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 25,
+          "NextID": 26,
+          "DebugID": 22
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "There are limitations in Amorous to playing a character with multiple or mixed genital anatomies,░ such anatomy is not supported in our flash animation.",
+          "Title": "Team Amorous",
+          "Color": {
+            "B": 255,
+            "G": 160,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 26,
+          "NextID": 8,
+          "DebugID": 22
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Herm",
+          "Value": true,
+          "ID": 27,
+          "NextID": 39,
+          "DebugID": 23
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "TeamAmorousNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 28,
+          "NextID": 29,
+          "DebugID": 24
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Thank you! Have fun playing Amorous.",
+          "Title": "Team Amorous",
+          "Color": {
+            "B": 255,
+            "G": 160,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 29,
+          "NextID": 37,
+          "DebugID": 24
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Female",
+          "Value": true,
+          "ID": 30,
+          "NextID": 21,
+          "DebugID": 25
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.FtM",
+          "Value": true,
+          "ID": 31,
+          "NextID": 3,
+          "DebugID": 26
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.MtF",
+          "Value": true,
+          "ID": 32,
+          "NextID": 6,
+          "DebugID": 27
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Andro",
+          "Value": true,
+          "ID": 33,
+          "NextID": 7,
+          "DebugID": 28
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.DialogueChoiceEventData, Amorous.Engine",
+          "Choices": [
+            {
+              "Text": "The term \"girlfriend\" is fine with me.",
+              "NextID": 18
+            },
+            {
+              "Text": "I'd prefer the term \"partner\".",
+              "NextID": 15
+            }
+          ],
+          "ID": 34,
+          "NextID": 0,
+          "DebugID": 29
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "TeamAmorousNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 35,
+          "NextID": 36,
+          "DebugID": 30
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Hello %playername%!░\r\n\r\nPlease answer the following questions to allow us to optimize the game as well as possible for you.",
+          "Title": "Team Amorous",
+          "Color": {
+            "B": 255,
+            "G": 160,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 36,
+          "NextID": 1,
+          "DebugID": 30
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetStageEventData, Amorous.Engine",
+          "Quest": "Gender",
+          "Stage": 20,
+          "ID": 37,
+          "NextID": 0,
+          "DebugID": 31
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Male",
+          "Value": true,
+          "ID": 38,
+          "NextID": 28,
+          "DebugID": 32
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.CensorCheckEventData, Amorous.Engine",
+          "SFWID": 8,
+          "NSFWID": 25,
+          "ID": 39,
+          "NextID": 0,
+          "DebugID": 33
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.CensorCheckEventData, Amorous.Engine",
+          "SFWID": 41,
+          "NSFWID": 10,
+          "ID": 40,
+          "NextID": 0,
+          "DebugID": 34
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SpawnNPCEventData, Amorous.Engine",
+          "NPC": "TeamAmorousNPC",
+          "Location": null,
+          "Layer": "None",
+          "Voice": null,
+          "Head": null,
+          "Pose": null,
+          "Clothes": null,
+          "ID": 41,
+          "NextID": 42,
+          "DebugID": 35
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.PlayDialogueEventData, Amorous.Engine",
+          "Text": "Your choices will effect pronouns used and a more neutral description of intimate scenes. Please be aware that there may be limitations in the customization of certain scenes based on an originally male-only protagonist. ",
+          "Title": "Team Amorous",
+          "Color": {
+            "B": 255,
+            "G": 160,
+            "R": 255,
+            "A": 255
+          },
+          "ID": 42,
+          "NextID": 28,
+          "DebugID": 35
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.CensorCheckEventData, Amorous.Engine",
+          "SFWID": 41,
+          "NSFWID": 23,
+          "ID": 43,
+          "NextID": 0,
+          "DebugID": 36
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Andro",
+          "Value": false,
+          "ID": 44,
+          "NextID": 1,
+          "DebugID": 37
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Neutral",
+          "Value": false,
+          "ID": 45,
+          "NextID": 46,
+          "DebugID": 38
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Female",
+          "Value": false,
+          "ID": 46,
+          "NextID": 47,
+          "DebugID": 39
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.Herm",
+          "Value": false,
+          "ID": 47,
+          "NextID": 7,
+          "DebugID": 40
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.MtF",
+          "Value": false,
+          "ID": 48,
+          "NextID": 5,
+          "DebugID": 41
+        },
+        {
+          "$type": "Amorous.Engine.Data.Cutscenes.SetFlagEventData, Amorous.Engine",
+          "Flag": "Player.Gender.FtM",
+          "Value": false,
+          "ID": 49,
+          "NextID": 2,
+          "DebugID": 42
+        }
+      ]
+    }
+  ]
+}
