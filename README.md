@@ -1,71 +1,100 @@
-Amorous Türkçe Dil Yaması
+# 🇹🇷 Amorous Türkçe Dil Yaması
 
-Bu projede, Amorous oyununu Türkçe oynamak isteyen kullanıcılar için bir çeviri çözümü sunuyorum. Aşağıda hem doğrudan kuruluma yönelik yöntem hem de çeviriyi manuel yapmak isteyenler için detaylı bir rehber yer almaktadır.
-🔁 Hızlı Kurulum (Tavsiye Edilen Yöntem)
+Bu proje, **Amorous** oyununu Türkçe oynamak isteyen kullanıcılar için hazırlanmıştır. Aşağıda hem hızlı kurulum yöntemi hem de manuel çeviri yapmak isteyen kullanıcılar için detaylı bir rehber sunulmaktadır.
 
-Eğer dosyalarla manuel uğraşmak istemiyorsanız ve oyunu Steam üzerinden varsayılan kurulum konumuna yüklediyseniz, aşağıdaki adımları izleyerek oyunu Türkçeleştirebilirsiniz:
+---
 
-    Aşağıda verdiğim Quests klasörünü indirin ve çıkartın.
+## 🔁 Hızlı Kurulum (Tavsiye Edilen Yöntem)
 
-    Dosya yöneticinize aşağıdaki yolu yapıştırarak oyunun dil dosyalarının olduğu konuma gidin:
+Eğer dosyalarla manuel olarak uğraşmak istemiyorsanız ve oyunu Steam üzerinden **varsayılan kurulum konumuna** yüklediyseniz, aşağıdaki adımları takip ederek oyunu hızlıca Türkçeleştirebilirsiniz:
 
-    C:\Program Files (x86)\Steam\steamapps\common\Amorous\Content-Release\Data
+1. Aşağıda verilen `Quests` klasörünü indirin ve çıkartın.
+2. Dosya yöneticinize aşağıdaki yolu yapıştırarak oyunun dil dosyalarının olduğu konuma gidin:
 
-    Buradaki mevcut Quests klasörünü yedekleyin (isteğe bağlı ama önerilir).
+C:\Program Files (x86)\Steam\steamapps\common\Amorous\Content-Release\Data
 
-    Ardından indirdiğiniz Quests klasörünü bu konuma yapıştırın ve var olan dosyaların üzerine yazılmasına izin verin.
+yaml
+Copy
+Edit
 
-Bu işlemlerden sonra oyun Türkçe olarak çalışacaktır.
-🛠️ Manuel Çeviri Süreci
+3. Buradaki mevcut `Quests` klasörünü **yedeklemeniz önerilir**.
+4. İndirdiğiniz `Quests` klasörünü bu konuma yapıştırın ve dosyaların üzerine yazılmasına **izin verin**.
+
+> ✅ Bu işlemlerden sonra oyunu başlattığınızda artık Türkçe içerik ile çalışıyor olacaktır.
+
+---
+
+## 🛠️ Manuel Çeviri Süreci
 
 Kendi çevirinizi yapmak isterseniz aşağıdaki adımları takip edebilirsiniz:
-1. Dosya Konumuna Erişim
 
-Steam'den indirilen oyunun çeviri dosyaları şurada yer alır:
+### 1. Dosya Konumuna Erişim
+
+Oyun Steam üzerinden indirildiyse çeviri dosyaları şu klasördedir:
 
 C:\Program Files (x86)\Steam\steamapps\common\Amorous\Content-Release\Data\Quests
 
-2. Dosyaları Açma
+yaml
+Copy
+Edit
 
-Bu klasörde .json uzantılı ancak sıkıştırılmış ve şifrelenmiş yapıda dosyalar göreceksiniz. Bu dosyaları doğrudan bir kod editörü ile açarsanız içeriği anlamlı olmayacaktır.
+### 2. Dosyaları Açma
 
-Çözüm:
-7-Zip yazılımını kullanın. İndirme bağlantısı: https://www.7-zip.org
+Bu klasörde `.json` uzantılı fakat **sıkıştırılmış ve şifrelenmiş** yapıda dosyalar bulunmaktadır. Bu dosyaları bir kod editörüyle doğrudan açmak sağlıklı sonuç vermez.
 
-Adımlar:
+#### 🔓 Çözüm:
+- **7-Zip** yazılımını kullanın: [https://www.7-zip.org](https://www.7-zip.org)
 
-    İlgili .json dosyasına sağ tıklayın → 7-Zip → Open Archive seçeneğini tıklayın.
+**Adımlar:**
+1. İlgili `.json` dosyasına sağ tıklayın → `7-Zip` → `Open Archive` seçeneğini tıklayın.
+2. Açılan pencerede içeriği görebileceksiniz.
+3. `File > Edit` (veya `F4` tuşu) ile düzenleyin.
+4. Kaydettikten sonra güncellemeyi onaylayın.
 
-    Açılan pencerede içeriği görebileceksiniz.
+---
 
-    File > Edit (veya F4 tuşu) ile dosyanın içeriğini düzenleyebilirsiniz. Kaydettikten sonra 7-Zip size güncellemek isteyip istemediğinizi soracaktır. Evet diyerek değişiklikleri onaylayabilirsiniz.
+## 🧩 Çeviri Araçları
 
-🧩 Çeviri Araçları
+Aşağıdaki Python scriptleri çeviri sürecini hızlandırmak için geliştirilmiştir:
 
-Çeviri sürecini kolaylaştırmak amacıyla birkaç Python aracı geliştirdim:
-1. A_Txt.py – JSON'dan Metin Çıkarımı
+### 1. `A_Txt.py` – JSON'dan Metin Çıkarımı
 
-Bu script, .json dosyasındaki "Text" anahtarına karşılık gelen metinleri çıkararak aynı isimde bir .txt dosyasına aktarır. ░ gibi özel karakterleri de otomatik olarak temizler. Kodun içinde tüm adımlar ayrıntılı olarak açıklanmıştır.
-2. A_Part.py – Metni Parçalara Bölme
+- `.json` dosyasındaki `"Text"` alanlarını çıkarır.
+- Aynı isimde bir `.txt` dosyasına aktarır.
+- `░` gibi özel karakterleri temizler.
+- Kod içi açıklamalarla kullanımı kolaydır.
 
-Çıkarılan .txt dosyasını çeviri motorlarına (örneğin GPT, DeepL vb.) daha kolay aktarabilmek için bu script, metni 200 blokluk parçalara ayırır. Bu sayede hem kontrol edilebilir hem de sistemli çeviri sağlanır.
-📌 Notlar
+### 2. `A_Part.py` – Metni Parçalara Bölme
 
-    Kodları çalıştırmadan önce açıklamaları dikkatlice okuyun.
+- .txt dosyasını 200 satırlık parçalara ayırır.
+- GPT, DeepL gibi çeviri motorlarına aktarmayı kolaylaştırır.
+- Parçalı çeviri sürecinde kontrolü artırır.
 
-    Geliştirilen kodlar Python ile yazılmıştır ve çalıştırılmadan önce gerekli dosya yollarının kişisel sisteminize göre düzenlenmesi gerekir.
+> ⚠️ Kodları çalıştırmadan önce dosya yollarını kendi sisteminize göre düzenlemeyi unutmayın.
 
-    Herhangi bir sorunuz olursa bana e-posta ile ulaşabilirsiniz.
+---
 
-🚧 Geliştirme Notları
+## 🎮 Son Adım – Türkçeleştirilmiş JSON'u Oyuna Aktarma
 
-Bu döküman şu an için v1.1 sürümünü kapsamaktadır. v1.2 ile birlikte çevirilen .txt dosyasının tekrar .json yapısına otomatik olarak aktarılmasını sağlayacak yeni bir script planlanmaktadır.
-🎮 Son Adım – Türkçeleştirilmiş JSON'u Oyuna Aktarma
+1. Çevirdiğiniz `.txt` içeriğini orijinal `.json` dosyasına aktarın.
+2. `7-Zip` ile ilgili `.json` arşivini açın.
+3. `Edit (F4)` ile içeriği düzenleyin ve kaydedin.
+4. Güncelleme onayını verin.
+5. Oyunu başlattığınızda Türkçeleştirme aktif olacaktır.
 
-    Elde edilen çevirili .json dosyasını tekrar 7-Zip ile açın.
+---
 
-    Edit (F4) seçeneği ile orijinal dosya içeriğini yeni çeviriyle değiştirin.
+## 🚧 Geliştirme Notları
 
-    Kaydedip arşiv güncellemeyi onaylayın.
+- Bu belge **v1.1** sürümünü kapsamaktadır.
+- Yakında çıkacak **v1.2** ile `.txt` çevirisini tekrar `.json` yapısına otomatik aktaran yeni bir script yayınlanacaktır.
 
-    Oyunu başlattığınızda artık Türkçe içerikle çalışıyor olacaktır.
+---
+
+## 📬 Destek
+
+Herhangi bir sorunuz veya öneriniz olursa benimle e-posta üzerinden iletişime geçebilirsiniz.
+
+---
+
+**Amorous** oyununun Türkçeleştirilmesine katkı sağlamak isterseniz, Pull Request gönderebilir veya Issues kısmından bildirimde bulunabilirsiniz.
